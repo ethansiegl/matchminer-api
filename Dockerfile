@@ -6,7 +6,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 RUN echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
 # install ubuntu packages.
-RUN DEBIAN_FRONTEND=noninteractive apt-get update --fix-missing && apt-get install -y \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update --fix-missing && apt-get install -y --force-yes \
     build-essential \
     autoconf \
     libtool \
@@ -69,6 +69,8 @@ COPY ./cerberus1 /var/www/apache-flask/api/cerberus1
 COPY ./pymm_run.py /var/www/apache-flask/api/pymm_run.py
 COPY ./api-swagger-documentation.json /var/www/apache-flask/api/api-swagger-documentation.json
 COPY ./email.config.json /var/www/apache-flask/api/email.config.json
+COPY ./SECRETS_JSON.json /var/www/apache-flask/api/SECRETS_JSON.json
+RUN mkdir /var/www/apache-flask/api/saml
 
 # start apache
 EXPOSE 80
