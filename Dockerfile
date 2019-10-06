@@ -51,7 +51,8 @@ ENV PYTHONWARNINGS="ignore:a true SSLContext object"
 RUN pip install pkgconfig
 
 # copy over and install the requirements
-RUN pip install --upgrade setuptools pip numpy
+RUN pip install numpy
+RUN pip install --upgrade setuptools pip
 COPY ./requirements.txt /var/www/apache-flask/api/requirements.txt
 RUN pip install --ignore-installed six -r /var/www/apache-flask/api/requirements.txt
 
