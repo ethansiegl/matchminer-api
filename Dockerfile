@@ -71,6 +71,8 @@ COPY ./pymm_run.py /var/www/apache-flask/api/pymm_run.py
 COPY ./api-swagger-documentation.json /var/www/apache-flask/api/api-swagger-documentation.json
 COPY ./email.config.json /var/www/apache-flask/api/email.config.json
 COPY ./SECRETS_JSON.json /var/www/apache-flask/api/SECRETS_JSON.json
+RUN mkdir -p /var/www/apache-flask/api/matchminer/data/
+COPY ./oncotree_file.txt /var/www/apache-flask/api/matchminer/data/oncotree_file.txt
 RUN mkdir /var/www/apache-flask/api/saml
 
 # start apache
