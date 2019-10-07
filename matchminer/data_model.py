@@ -545,7 +545,7 @@ parent_schema = {
     },
     'protocol_no': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'protocol_id': {
         'type': 'integer',
@@ -602,7 +602,7 @@ parent_schema = {
     },
     'nct_id': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'age': {
         'type': 'string',
@@ -638,13 +638,13 @@ parent_schema = {
         'schema': {
             'program_area': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     'schema': {
                         'program_area_name': {
                             'type': 'string',
-                            'required': True
+                            'required': False
                             },
                         'is_primary': {
                             'type': 'string',
@@ -662,7 +662,7 @@ parent_schema = {
         'schema': {
             'site': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
@@ -693,7 +693,7 @@ parent_schema = {
         'schema': {
             'management_group': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
@@ -718,7 +718,7 @@ parent_schema = {
         'schema': {
             'step': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
@@ -832,7 +832,7 @@ parent_schema = {
         'schema': {
             'oncology_group': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
@@ -855,7 +855,7 @@ parent_schema = {
         'schema': {
             'disease_site': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
@@ -878,7 +878,7 @@ parent_schema = {
         'schema': {
             'protocol_staff': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
@@ -937,7 +937,7 @@ parent_schema = {
         'schema': {
             'sponsor': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
