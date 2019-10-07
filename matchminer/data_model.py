@@ -549,12 +549,12 @@ parent_schema = {
     },
     'protocol_id': {
         'type': 'integer',
-        'required': True,
-        'unique': True
+        'required': False,
+        'unique': False
     },
     'principal_investigator': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'principal_investigator_institution': {
         'type': 'string',
@@ -594,11 +594,11 @@ parent_schema = {
     },
     'short_title': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'long_title': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'nct_id': {
         'type': 'string',
@@ -606,27 +606,27 @@ parent_schema = {
     },
     'age': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'phase': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'data_table4': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'protocol_type': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'protocol_target_accrual': {
         'type': 'integer',
-        'required': True
+        'required': False
     },
     'cancer_center_accrual_goal_upper': {
         'type': 'integer',
-        'required': True
+        'required': False
     },
     'cancer_center_current_accrual': {
         'type': 'integer',
@@ -634,7 +634,7 @@ parent_schema = {
     },
     'program_area_list': {
         'type': 'dict',
-        'required': True,
+        'required': False,
         'schema': {
             'program_area': {
                 'type': 'list',
@@ -658,7 +658,7 @@ parent_schema = {
     },
     'site_list': {
         'type': 'dict',
-        'required': True,
+        'required': False,
         'schema': {
             'site': {
                 'type': 'list',
@@ -689,7 +689,7 @@ parent_schema = {
     },
     'management_group_list': {
         'type': 'dict',
-        'required': True,
+        'required': False,
         'schema': {
             'management_group': {
                 'type': 'list',
@@ -713,7 +713,7 @@ parent_schema = {
     },
     'treatment_list': {
         'type': 'dict',
-        'required': True,
+        'required': False,
         'normalized': 'trial',
         'schema': {
             'step': {
@@ -828,7 +828,7 @@ parent_schema = {
     },
     'oncology_group_list': {
         'type': 'dict',
-        'required': True,
+        'required': False,
         'schema': {
             'oncology_group': {
                 'type': 'list',
@@ -874,7 +874,7 @@ parent_schema = {
     },
     'staff_list': {
         'type': 'dict',
-        'required': True,
+        'required': False,
         'schema': {
             'protocol_staff': {
                 'type': 'list',
@@ -933,7 +933,7 @@ parent_schema = {
     },
     'sponsor_list': {
         'type': 'dict',
-        'required': True,
+        'required': False,
         'schema': {
             'sponsor': {
                 'type': 'list',
