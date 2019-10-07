@@ -668,19 +668,19 @@ parent_schema = {
                     "schema": {
                         "site_name": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "site_status": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "uses_cancer_center_irb": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "coordinating_center": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         }
                     }
                 }
@@ -699,11 +699,11 @@ parent_schema = {
                     "schema": {
                         "management_group_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "is_primary": {
                             "type": "string",
-                            "required": True,
+                            'required': False,
                             'allowed': ['Y', 'N']
                         }
                     }
@@ -730,15 +730,15 @@ parent_schema = {
                         },
                         "step_internal_id": {
                             "type": "integer",
-                            "required": True
+                            "required": False
                         },
                         "step_code": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "step_type": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "arm": {
                             "type": "list",
@@ -754,19 +754,19 @@ parent_schema = {
                                     },
                                     "arm_internal_id": {
                                         "type": "integer",
-                                        "required": True
+                                        'required': False
                                     },
                                     "arm_code": {
                                         "type": "string",
-                                        "required": True
+                                        'required': False
                                     },
                                     "arm_description": {
                                         "type": "string",
-                                        "required": True
+                                        'required': False
                                     },
                                     "arm_suspended": {
                                         "type": "string",
-                                        "required": True
+                                        'required': False
                                     },
                                     "dose_level": {
                                         "type": "list",
@@ -782,19 +782,19 @@ parent_schema = {
                                                 },
                                                 "level_internal_id": {
                                                     "type": "integer",
-                                                    "required": True
+                                                    'required': False
                                                 },
                                                 "level_code": {
                                                     "type": "string",
-                                                    "required": True
+                                                    'required': False
                                                 },
                                                 "level_description": {
                                                     "type": "string",
-                                                    "required": True
+                                                    'required': False
                                                 },
                                                 "level_suspended": {
                                                     "type": "string",
-                                                    "required": True
+                                                    'required': False
                                                 },
                                             }
                                         }
@@ -838,11 +838,11 @@ parent_schema = {
                     "schema": {
                         "group_name": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "is_primary": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         }
                     }
                 }
@@ -861,11 +861,11 @@ parent_schema = {
                     "schema": {
                         "disease_site_name": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "disease_site_code": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         }
                     }
                 }
@@ -884,36 +884,36 @@ parent_schema = {
                     "schema": {
                         "first_name": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "last_name": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "middle_name": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "npi": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "institution_name": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "staff_role": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "start_date": {
                             "type": "integer",
-                            "required": True,
+                            'required': False,
                             "nullable": True
                         },
                         "stop_date": {
                             "type": "integer",
-                            "required": True,
+                            'required': False,
                             "nullable": True
                         },
                         "phone_no": {
@@ -943,19 +943,19 @@ parent_schema = {
                     "schema": {
                         "sponsor_name": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "sponsor_protocol_no": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "is_principal_sponsor": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         },
                         "sponsor_roles": {
                             "type": "string",
-                            "required": True
+                            'required': False
                         }
                     }
                 }
