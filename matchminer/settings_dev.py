@@ -157,7 +157,7 @@ status = {
 
 trial = {
     'schema': matchminer.data_model.parent_schema,
-    'allow_unknown': False,
+    'allow_unknown': True,
     "allowed_read_roles": ["admin", "service", "user", "curator"],
     "allowed_write_roles": ["admin", "curator"],
     "public_item_methods": ['GET'],
