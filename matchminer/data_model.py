@@ -766,7 +766,7 @@ parent_schema = {
                                     },
                                     "arm_suspended": {
                                         "type": "string",
-                                        "required": True
+                                        "required": False
                                     },
                                     "dose_level": {
                                         "type": "list",
