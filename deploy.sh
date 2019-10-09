@@ -10,4 +10,4 @@ scp /Users/ethansiegel/code/mm-devops/demo/docker-compose.yml esiegel@35.193.82.
 
 echo ""
 echo "deploying..."
-ssh -t esiegel@35.193.82.240  'bash -ic "docker stop mm_api && docker rm mm_api && dc pull mm_api && dc up -d mm_api"' ;
+ssh -t esiegel@35.193.82.240  'bash -ic "docker stop mm_api; docker rm mm_api; dc pull mm_api; dc up -d mm_api"' ;
