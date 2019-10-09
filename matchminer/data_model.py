@@ -638,13 +638,13 @@ parent_schema = {
         'schema': {
             'program_area': {
                 'type': 'list',
-                'required': True,
+                'required': True, # TODO manually curated
                 'schema': {
                     "type": "dict",
                     'schema': {
                         'program_area_name': {
                             'type': 'string',
-                            'required': True
+                            'required': True # e.g. Lung
                             },
                         'is_primary': {
                             'type': 'string',
@@ -660,7 +660,7 @@ parent_schema = {
         'type': 'dict',
         'required': False,
         'schema': {
-            'site': {
+            'site': { # TODO exists but must be transformed
                 'type': 'list',
                 'required': True,
                 'schema': {
@@ -693,17 +693,17 @@ parent_schema = {
         'schema': {
             'management_group': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
                         "management_group_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "is_primary": {
                             "type": "string",
-                            "required": True,
+                            "required": False,
                             'allowed': ['Y', 'N']
                         }
                     }
@@ -711,7 +711,7 @@ parent_schema = {
             }
         }
     },
-    'treatment_list': {
+    'treatment_list': { #TODO to test first
         'type': 'dict',
         'required': False,
         'normalized': 'trial',
@@ -730,15 +730,15 @@ parent_schema = {
                         },
                         "step_internal_id": {
                             "type": "integer",
-                            "required": True
+                            "required": False
                         },
                         "step_code": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "step_type": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "arm": {
                             "type": "list",
@@ -754,7 +754,7 @@ parent_schema = {
                                     },
                                     "arm_internal_id": {
                                         "type": "integer",
-                                        "required": True
+                                        "required": False
                                     },
                                     "arm_code": {
                                         "type": "string",
@@ -832,17 +832,17 @@ parent_schema = {
         'schema': {
             'oncology_group': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
                         "group_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "is_primary": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         }
                     }
                 }
@@ -855,17 +855,17 @@ parent_schema = {
         'schema': {
             'disease_site': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
                         "disease_site_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "disease_site_code": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         }
                     }
                 }
