@@ -62,8 +62,10 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 
 RUN pip uninstall -y certifi && pip install certifi ndg-httpsclient pyasn1
 
+# hack from https://github.com/onelogin/python3-saml/issues/82
+RUN STATIC_DEPS=true pip install lxml==4.1.1 --force-reinstall
+
 # copy the applicaiton
-COPY ./matchminer /var/www/apache-flask/api/matchminer
 COPY ./services /var/www/apache-flask/api/services
 COPY ./tcm /var/www/apache-flask/api/tcm
 COPY ./cerberus1 /var/www/apache-flask/api/cerberus1
@@ -74,12 +76,9 @@ COPY ./SECRETS_JSON.json /var/www/apache-flask/api/SECRETS_JSON.json
 RUN mkdir -p /var/www/apache-flask/api/matchminer/data/
 COPY ./oncotree_file.txt /var/www/apache-flask/api/matchminer/data/oncotree_file.txt
 RUN mkdir /var/www/apache-flask/api/saml
+COPY ./matchminer /var/www/apache-flask/api/matchminer
 
 # start apache
-EXPOSE 80
-EXPOSE 443
-EXPOSE 5000
-EXPOSE 8443
 WORKDIR /var/www/apache-flask/api
 
 # setup entrypoint.
@@ -89,5 +88,3 @@ ENTRYPOINT  ["/entrypoint.sh"]
 # enable nano debugging (i hate vi)
 ENV TERM xterm
 
-# hack from https://github.com/onelogin/python3-saml/issues/82
-RUN STATIC_DEPS=true pip install lxml==4.1.1 --force-reinstall

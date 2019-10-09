@@ -57,7 +57,7 @@ class ConsentValidatorEve(EveValidator):
         schema_registry.add('yaml_clinical_schema', data_model.yaml_clinical_schema)
         v = Validator(data_model.yaml_match_schema)
 
-        # v.validate(value[0])
+        v.validate(value[0])
 
         if len(v.errors) > 0:
             self._error(field, v.errors)
