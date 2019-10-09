@@ -545,7 +545,7 @@ parent_schema = {
     },
     'protocol_no': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'protocol_id': {
         'type': 'integer',
@@ -602,7 +602,7 @@ parent_schema = {
     },
     'nct_id': {
         'type': 'string',
-        'required': True
+        'required': False
     },
     'age': {
         'type': 'string',
@@ -638,13 +638,13 @@ parent_schema = {
         'schema': {
             'program_area': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     'schema': {
                         'program_area_name': {
                             'type': 'string',
-                            'required': True
+                            'required': False
                             },
                         'is_primary': {
                             'type': 'string',
@@ -662,7 +662,7 @@ parent_schema = {
         'schema': {
             'site': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
@@ -693,7 +693,7 @@ parent_schema = {
         'schema': {
             'management_group': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
@@ -718,7 +718,7 @@ parent_schema = {
         'schema': {
             'step': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
@@ -730,15 +730,15 @@ parent_schema = {
                         },
                         "step_internal_id": {
                             "type": "integer",
-                            "required": True
+                            "required": False
                         },
                         "step_code": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "step_type": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "arm": {
                             "type": "list",
@@ -754,15 +754,15 @@ parent_schema = {
                                     },
                                     "arm_internal_id": {
                                         "type": "integer",
-                                        "required": True
+                                        "required": False
                                     },
                                     "arm_code": {
                                         "type": "string",
-                                        "required": True
+                                        "required": False
                                     },
                                     "arm_description": {
                                         "type": "string",
-                                        "required": True
+                                        "required": False
                                     },
                                     "arm_suspended": {
                                         "type": "string",
@@ -782,19 +782,19 @@ parent_schema = {
                                                 },
                                                 "level_internal_id": {
                                                     "type": "integer",
-                                                    "required": True
+                                                    "required": False
                                                 },
                                                 "level_code": {
                                                     "type": "string",
-                                                    "required": True
+                                                    "required": False
                                                 },
                                                 "level_description": {
                                                     "type": "string",
-                                                    "required": True
+                                                    "required": False
                                                 },
                                                 "level_suspended": {
                                                     "type": "string",
-                                                    "required": True
+                                                    "required": False
                                                 },
                                             }
                                         }
@@ -832,17 +832,17 @@ parent_schema = {
         'schema': {
             'oncology_group': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
                         "group_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "is_primary": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         }
                     }
                 }
@@ -855,17 +855,17 @@ parent_schema = {
         'schema': {
             'disease_site': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
                         "disease_site_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "disease_site_code": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         }
                     }
                 }
@@ -878,42 +878,42 @@ parent_schema = {
         'schema': {
             'protocol_staff': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
                         "first_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "last_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "middle_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "npi": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "institution_name": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "staff_role": {
                             "type": "string",
-                            "required": True
+                            "required": False
                         },
                         "start_date": {
                             "type": "integer",
-                            "required": True,
+                            "required": False,
                             "nullable": True
                         },
                         "stop_date": {
                             "type": "integer",
-                            "required": True,
+                            "required": False,
                             "nullable": True
                         },
                         "phone_no": {
@@ -937,7 +937,7 @@ parent_schema = {
         'schema': {
             'sponsor': {
                 'type': 'list',
-                'required': True,
+                'required': False,
                 'schema': {
                     "type": "dict",
                     "schema": {
