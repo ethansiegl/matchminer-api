@@ -181,7 +181,8 @@ class Summary:
         # if not present, return overall principal investigator, regardless of affiliated institution
         for staff in item['staff_list']['protocol_staff']:
             if staff['staff_role'] == 'Overall Principal Investigator':
-                self.dfci_investigator = parse_dfci_investigator(staff, item['principal_investigator'], dfci=False)
+                if item['principal_investigator'] is not None:
+                    self.dfci_investigator = parse_dfci_investigator(staff, item['principal_investigator'], dfci=False)
                 return
 
     def _get_signatures(self, item):
